@@ -1,0 +1,29 @@
+﻿@* khi truyền trực tiếp từ Controller sang view = @model CRUD_WebMVC.Models.Product*@
+
+
+<h1>List Product</h1>
+<a href="/Home/Create" class="btn btn-success">Create</a>
+<br />
+<br />
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+        <th></th>
+
+    </tr>
+    @foreach (var p in ViewBag.ListProduct)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Price</td>
+            <td><a href="/Home/Edit?Id=@p.Id">Edit</a></td>
+            <td><a href="/Home/Delete?Id=@p.Id">Remote</a></td>
+
+        </tr>
+    }
+
+</table>

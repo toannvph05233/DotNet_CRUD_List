@@ -1,0 +1,29 @@
+﻿@model CRUD_WebMVC.Models.Product
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h1>Edit Product</h1>
+<form method="post" action="/Home/Edit">
+
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <td><input name="Id" value="@Model.Id" /></td>
+            <td><input name="Name" value="@Model.Name" /></td>
+            <td><input name="Price" value="@Model.Price" /></td>
+            <td><button type="submit">Update</button></td>
+
+        </tr>
+
+
+    </table>
+</form>
